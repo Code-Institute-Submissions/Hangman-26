@@ -16,7 +16,12 @@ If the player puts an incorrect letter the error message is displayes and the pl
 
 Game ends if the player correctly guess all the letters of the missing word or if the player loses all his lives.
 
+# User Stories 
 
+- As a user I want to easily understand the purpose of the game
+- As a user I want to have fun
+- As a user I want to see my remaining lives
+- As a user I want the game to be challenging 
 
 
 
