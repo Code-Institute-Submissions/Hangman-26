@@ -23,6 +23,13 @@ Game ends if the player correctly guess all the letters of the missing word or i
 - As a user I want to see my remaining lives
 - As a user I want the game to be challenging 
 
+# Desing
+
+## Flowchart:
+
+<p align="center">
+<img src="readme-assets/images/flowchart-hangman.png" width="1000px" height="1000">
+</p>
 
 
 
