@@ -1,3 +1,78 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+"""
+Project portfolio3
+"""
+import random
+import words
+
+def display_hangman():
+    tries = [  # head, torso, arms and legs
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |     / \\
+                   -
+                """,
+                # head, torso, arms, and one leg
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |     /
+                   -
+                """,
+                # head, torso, and both arms
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |
+                   -
+                """,
+                # head, torso, and one arm
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|
+                   |      |
+                   |
+                   -
+                """,
+                # head and torso
+                """
+                   --------
+                   |      |
+                   |      O
+                   |      |
+                   |      |
+                   |
+                   -
+                """,
+                # head
+                """
+                   --------
+                   |      |
+                   |      O
+                   |
+                   |
+                   |
+                   -
+                """,
+                # initial empty state
+                """
+                   --------
+                   |      |
+                   |
+                   |
+                   |
+                   |
+                   -
+                """
+    ]
