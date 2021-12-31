@@ -23,7 +23,7 @@ Game ends if the player correctly guess all the letters of the missing word or i
 - As a user I want to see my remaining lives
 - As a user I want the game to be challenging 
 
-# Desing
+# Design
 
 ## Flowchart:
 
@@ -32,6 +32,19 @@ Game ends if the player correctly guess all the letters of the missing word or i
 </p>
 
 
+# Features
 
+- Game rules - the user can see the game rules at the top of the page
+- Choose a game difficulty - ... 
+- Random word - a random word is selected from a list of selected words
+- User Input - the player is asked to guess a letter. If the entry is correct, the letter will appear in the word, if the entry is incorrect, the user will lose one life and the hangman will start drawing.
+- Invalid inputs - to be sure that the user provide the correct input, for any invalid input the error massage will appear. 
+
+
+# Issues and Bugs
+# Technologies Used
+# Testing
+# Deployment 
+# Credits
 
 
