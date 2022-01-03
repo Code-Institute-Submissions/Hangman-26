@@ -1,88 +1,106 @@
 """
-Project portfolio3
+Project portfolio 3
 """
 import random
 import words
 
+easy_level = words.easy_words
+medium_level = words.med_words
+hard_level = words.hard_words
 
-
-# get the word
-def get_word():
-    word = words.easy_words
-    random_word = random.choice(word)
-    return random_word.upper()
-
-
-#Hangman drawing
 def display_hangman():
-    tries = [  # head, torso, arms and legs
+    """
+    Hangman lives
+    """
+    lives = [
                 """
-                   --------
-                   |      |
-                   |      O
-                   |     \\|/
-                   |      |
-                   |     / \\
-                   -
+                _________
+                |/      |
+                |       O
+                |     --|--
+                |       |
+                |      / \\
+            ____|_\\___
                 """,
-                # head, torso, arms, and one leg
+
                 """
-                   --------
-                   |      |
-                   |      O
-                   |     \\|/
-                   |      |
-                   |     /
-                   -
+                _________
+                |/      |
+                |       O
+                |     --|--
+                |       |
+                |      /
+            ____|_\\___
                 """,
-                # head, torso, and both arms
                 """
-                   --------
-                   |      |
-                   |      O
-                   |     \\|/
-                   |      |
-                   |
-                   -
+                _________
+                |/      |
+                |       O
+                |     --|--
+                |       |
+                |
+            ____|_\\___
                 """,
-                # head, torso, and one arm
                 """
-                   --------
-                   |      |
-                   |      O
-                   |     \\|
-                   |      |
-                   |
-                   -
+                _________
+                |/      |
+                |       O
+                |     --|
+                |       |
+                |
+            ____|_\\___
                 """,
-                # head and torso
                 """
-                   --------
-                   |      |
-                   |      O
-                   |      |
-                   |      |
-                   |
-                   -
+                _________
+                |/      |
+                |       O
+                |       |
+                |       |
+                |
+            ____|_\\___
                 """,
-                # head
                 """
-                   --------
-                   |      |
-                   |      O
-                   |
-                   |
-                   |
-                   -
+                _________
+                |/      |
+                |       O
+                |
+                |
+                |
+            ____|_\\___
                 """,
-                # initial empty state
                 """
-                   --------
-                   |      |
-                   |
-                   |
-                   |
-                   |
-                   -
+                _________
+                |/      |
+                |
+                |
+                |
+                |
+            ____|_\\___
+                """,
                 """
+                _________
+                |/
+                |
+                |
+                |
+                |
+            ____|_\\___
+                """,
+                """
+                |/
+                |
+                |
+                |
+                |
+            ____|_\\___
+                """,
+                """
+
+
+
+
+
+            ______\\___
+                """
+
     ]
