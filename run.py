@@ -4,7 +4,6 @@ Project Portfolio
 import random
 import word
 import os
-import sys
 
 easy_level = word.easy_words
 medium_level = word.med_words
@@ -48,11 +47,10 @@ def rules():
     print("Be careful because a harder level means more letters.")
     print("Good luck!\n")
 
-    menu = input("Press enter to return to the main menu")
+    menu = input("Press enter to return to the main menu\n")
     welcome()
 
 welcome()
-
 
 
 def display_hangman(lives):
