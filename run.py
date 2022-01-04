@@ -1,6 +1,3 @@
-"""
-Project Portfolio
-"""
 import random
 import word
 import os
@@ -49,6 +46,7 @@ def rules():
 
     menu = input("Press enter to return to the main menu\n")
     welcome()
+
 
 welcome()
 
