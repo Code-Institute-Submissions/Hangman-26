@@ -18,7 +18,7 @@ def title():
     """
     Display the title
     """
-    print( " " * 20 +
+    print(
                 """
                  _   _
                 | | | | __ _ _ __   __ _ _ __ ___   __ _ _ __
@@ -46,7 +46,7 @@ def welcome():
         elif player_choice == '2':
             rules()
         else:
-            print('{:^80}'.format('You must chose 1 or 2')
+            print("You must chose 1 or 2")
 
 
 def rules():
@@ -55,23 +55,23 @@ def rules():
     """
     clear_terminal()
     title()
-    print('{:^80}'.format(
+    print(
         """
-        To play the game you must guess the letters of the hidden word.
-        If the guess is correct the letter missing in the word
-        is replaced by the correct letter.
-        You can enter the whole word if you know what the word is.
-        Each wrong guess takes one life.
-        You can choose the difficulty level,
-        E for easy (10 lives), M for medium (8 lives)
-        or H for hard (6 lives).
-        But be careful because a harder level means more letters.
-        \n
-        Good luck!
-        """
-    ))
+                To play the game you must guess the letters of the hidden word.
+                If the guess is correct the letter missing in the word
+                is replaced by the correct letter.
+                You can enter the whole word if you know what the word is.
+                Each wrong guess takes one life.
+                You can choose the difficulty level,
+                E for easy (10 lives), M for medium (8 lives)
+                or H for hard (6 lives).
+                But be careful because a harder level means more letters.
+                \n
+                Good luck!
+                """
+            )
 
-    menu = input("Press enter to return to the main menu\n")
+    menu = input(' ' * 15 + "Press enter to return to the main menu\n")
     print("\n")
     welcome()
 
@@ -105,7 +105,10 @@ def play():
     print(display_hangman(lives))
     print('\n')
     print('{:^75}'.format(blanks))
+    print('\n')
+    print(word)
     
+
     while not guessed and lives > 0:
         player_guess = input(' ' * 28 + "Please guess a leter: ").upper()
         if len(player_guess) == 1 and player_guess.isalpha():
