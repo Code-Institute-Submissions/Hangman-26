@@ -157,7 +157,7 @@ def play():
     if guessed:
         clear_terminal()
         title()
-        print("Congratulations you guessed the word")
+        print('{:^80}'.format("Congratulations you guessed the word"))
         player_wins = input("Would you like to play again? Y/N \n").upper()
         if player_wins == 'Y':
             play()
