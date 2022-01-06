@@ -57,21 +57,21 @@ def rules():
     title()
     print(
         """
-                To play the game you must guess the letters of the hidden word.
-                If the guess is correct the letter missing in the word
-                is replaced by the correct letter.
-                You can enter the whole word if you know what the word is.
-                Each wrong guess takes one life.
-                You can choose the difficulty level,
-                E for easy (10 lives), M for medium (8 lives)
-                or H for hard (6 lives).
-                But be careful because a harder level means more letters.
-                \n
-                Good luck!
-                """
+            To play the game you must guess the letters of the hidden word.
+            If the guess is correct the letter missing in the word
+            is replaced by the correct letter.
+            You can enter the whole word if you know what the word is.
+            Each wrong guess takes one life.
+            You can choose the difficulty level,
+            E for easy (10 lives), M for medium (8 lives)
+            or H for hard (6 lives).
+            But be careful because a harder level means more letters.
+            \n
+            Good luck!
+            """
             )
 
-    menu = input(' ' * 15 + "Press enter to return to the main menu\n")
+    menu = input(' ' * 12 + "Press enter to return to the main menu\n")
     print("\n")
     welcome()
 
@@ -106,9 +106,7 @@ def play():
     print('\n')
     print('{:^75}'.format(blanks))
     print('\n')
-    print(word)
     
-
     while not guessed and lives > 0:
         player_guess = input(' ' * 28 + "Please guess a leter: ").upper()
         if len(player_guess) == 1 and player_guess.isalpha():
