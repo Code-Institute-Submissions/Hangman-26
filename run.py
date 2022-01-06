@@ -28,6 +28,7 @@ def title():
                                     |___/
                 """
             ))
+    print("\n" * 3)
 
 def welcome():
     """
@@ -35,12 +36,11 @@ def welcome():
     """
     clear_terminal()
     title()
-    print('\n' * 3)
     print('{:^80}'.format(' 1 PLAY GAME '))
     print('{:^80}'.format(' 2 SEE RULES '))
     print('\n' * 4)
     while True:
-        player_choice = input('Please select 1 or 2: ')
+        player_choice = input(' ' * 25 + 'Please select 1 or 2: ')
         if player_choice == '1':
             play()
         elif player_choice == '2':
@@ -53,7 +53,6 @@ def rules():
     """
     clear_terminal()
     title()
-    print('\n' * 2)
     print('{:^80}'.format(
         """
         To play the game you must guess the letters of the hidden word.
@@ -79,6 +78,8 @@ def play():
     This functino will start the game and
     set the game difficulty
     """
+    clear_terminal()
+    title()
     difficulty_level = input("Please select E for easy(10 lives), M for medium 8 lives) and H for hard(6 lives)\n").upper()
     if difficulty_level == 'E':
         lives = 10
@@ -92,26 +93,36 @@ def play():
     else:
         ("Plese select E, M or H")
     
+    clear_terminal()
+    title()    
     blanks = "_" * len(word)
     guessed = False
     guessed_letters = []
     guessed_word = []
     print(display_hangman(lives))
-    print(blanks)
-    print("\n")
+    print('\n')
+    print('{:^75}'.format(blanks))
+    print('\n')
     print(word)
+    
 
     while not guessed and lives > 0:
-        player_guess = input("Please guess a leter: ").upper()
+        player_guess = input(' ' * 28 + "Please guess a leter: ").upper()
         if len(player_guess) == 1 and player_guess.isalpha():
             if player_guess in guessed_letters:
-                print("You already guess the letter", player_guess)
+                clear_terminal()
+                title()
+                print('{:^80}'.format("You already guess the letter "+ player_guess))
             elif player_guess not in word:
-                print("Sorry", player_guess, "is not in the word")
+                clear_terminal()
+                title()
+                print('{:^80}'.format("Sorry "+ player_guess + " is not in the word"))
                 lives -= 1
                 guessed_letters.append(player_guess)
             else:
-                print("Great", player_guess, "is in the word!")
+                clear_terminal()
+                title()
+                print('{:^80}'.format("Great " + player_guess + " is in the word!"))
                 guessed_letters.append(player_guess)
                 word_list = list(blanks)
                 indices = [i for i, letter in enumerate(word) if letter == player_guess]
@@ -122,23 +133,36 @@ def play():
                     guessed = True
         elif len(player_guess) == len(word) and player_guess.isalpha():
             if player_guess in guessed_word:
-                print("You already guessed the word", player_guess)
+                clear_terminal()
+                title()
+                print('{:^80}'.format("You already guessed the word " + player_guess))
             elif player_guess != word:
-                print(player_guess, "is not in the word")
+                clear_terminal()
+                title()
+                print('{:^80}'.format(player_guess + "is not in the word"))
                 lives -= 1
                 guessed_word.append(player_guess)
             else:
                 guessed = True
                 blanks = word
         else:
-            print("Not a valid guess")
+            clear_terminal()
+            title()
+            print('{:^80}'.format("Not a valid guess"))
         print(display_hangman(lives))
-        print(blanks)
+        print('{:^75}'.format(blanks))
+        print('\n')
 
     if guessed:
+        clear_terminal()
+        title()
         print("Congrads")
+        welcome()
     else:
+        clear_terminal()
+        title()
         print("Sorry")
+        welcome()
 
 
 
@@ -149,100 +173,100 @@ def display_hangman(lives):
     Hangman lives
     """
     stages = [
-                """
-                _________
-                |/      |
-                |       O
-                |     --|--
-                |       |
-                |      / \\
-            ____|_\\___
-                """,
+                                    """
+                                    _________
+                                    |/      |
+                                    |       O
+                                    |     --|--
+                                    |       |
+                                    |      / \\
+                                ____|_\\___
+                                    """,
 
-                """
-                _________
-                |/      |
-                |       O
-                |     --|--
-                |       |
-                |      /
-            ____|_\\___
-                """,
-                """
-                _________
-                |/      |
-                |       O
-                |     --|--
-                |       |
-                |
-            ____|_\\___
-                """,
-                """
-                _________
-                |/      |
-                |       O
-                |     --|
-                |       |
-                |
-            ____|_\\___
-                """,
-                """
-                _________
-                |/      |
-                |       O
-                |       |
-                |       |
-                |
-            ____|_\\___
-                """,
-                """
-                _________
-                |/      |
-                |       O
-                |
-                |
-                |
-            ____|_\\___
-                """,
-                """
-                _________
-                |/      |
-                |
-                |
-                |
-                |
-            ____|_\\___
-                """,
-                """
-                _________
-                |/
-                |
-                |
-                |
-                |
-            ____|_\\___
-                """,
-                """
-                |/
-                |
-                |
-                |
-                |
-            ____|_\\___
-                """,
-                """
-
-
+                                    """
+                                    _________
+                                    |/      |
+                                    |       O
+                                    |     --|--
+                                    |       |
+                                    |      /
+                                ____|_\\___
+                                    """,
+                                    """
+                                    _________
+                                    |/      |
+                                    |       O
+                                    |     --|--
+                                    |       |
+                                    |
+                                ____|_\\___
+                                    """,
+                                    """
+                                    _________
+                                    |/      |
+                                    |       O
+                                    |     --|
+                                    |       |
+                                    |
+                                ____|_\\___
+                                    """,
+                                    """
+                                    _________
+                                    |/      |
+                                    |       O
+                                    |       |
+                                    |       |
+                                    |
+                                ____|_\\___
+                                    """,
+                                    """
+                                    _________
+                                    |/      |
+                                    |       O
+                                    |
+                                    |
+                                    |
+                                ____|_\\___
+                                    """,
+                                    """
+                                    _________
+                                    |/      |
+                                    |
+                                    |
+                                    |
+                                    |
+                                ____|_\\___
+                                    """,
+                                    """
+                                    _________
+                                    |/
+                                    |
+                                    |
+                                    |
+                                    |
+                                ____|_\\___
+                                    """,
+                                    """
+                                    |/
+                                    |
+                                    |
+                                    |
+                                    |
+                                ____|_\\___
+                                    """,
+                                    """
 
 
 
-            ___________
-                """,
-                """
+
+
+                                ___________
+                                    """,
+                                    """
 
 
 
-                """
+                                    """
 
     ]
     return stages[lives]
