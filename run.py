@@ -28,7 +28,7 @@ def title():
                                     |___/
                 """
             ))
-    print("\n" * 3)
+    print("\n")
 
 def welcome():
     """
@@ -70,6 +70,7 @@ def rules():
     ))
 
     menu = input("Press enter to return to the main menu\n")
+    print("\n")
     welcome()
 
 
