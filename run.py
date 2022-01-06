@@ -94,12 +94,12 @@ def play():
     else:
         ("Plese select E, M or H")
     
-    clear_terminal()
-    title()    
+    clear_terminal()   
     blanks = "_" * len(word)
     guessed = False
     guessed_letters = []
     guessed_word = []
+    title()
     print(display_hangman(lives))
     print('\n')
     print('{:^75}'.format(blanks))
