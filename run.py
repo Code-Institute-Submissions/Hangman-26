@@ -156,13 +156,25 @@ def play():
     if guessed:
         clear_terminal()
         title()
-        print("Congrads")
-        welcome()
+        print("Congratulations you guessed the word")
+        player_wins = input("Would you like to play again? Y/N \n").upper()
+        if player_wins == 'Y':
+            play()
+        elif player_wins == 'N':
+            welcome()
+        else:
+            print("You must press Y or N")
     else:
         clear_terminal()
         title()
-        print("Sorry")
-        welcome()
+        print("Sorry, you run out of lives")
+        player_lost = input("Would you like to play again? Y/N \n").upper()
+        if player_lost == 'Y':
+            play()
+        elif player_lost == 'N':
+            welcome()
+        else:
+            print("You must press Y or N")
 
 
 
