@@ -18,7 +18,7 @@ def title():
     """
     Display the title
     """
-    print('{:*^80}'.format(
+    print( " " * 20 +
                 """
                  _   _
                 | | | | __ _ _ __   __ _ _ __ ___   __ _ _ __
@@ -27,7 +27,7 @@ def title():
                 |_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|
                                     |___/
                 """
-            ))
+            )
     print("\n")
 
 def welcome():
@@ -45,6 +45,8 @@ def welcome():
             play()
         elif player_choice == '2':
             rules()
+        else:
+            print('{:^80}'.format('You must chose 1 or 2')
 
 
 def rules():
@@ -103,10 +105,7 @@ def play():
     print(display_hangman(lives))
     print('\n')
     print('{:^75}'.format(blanks))
-    print('\n')
-    print(word)
     
-
     while not guessed and lives > 0:
         player_guess = input(' ' * 28 + "Please guess a leter: ").upper()
         if len(player_guess) == 1 and player_guess.isalpha():
