@@ -6,26 +6,6 @@ easy_level = word.easy_words
 medium_level = word.med_words
 hard_level = word.hard_words
 
-text_align = os.get_terminal_size().columns
-
-
-
-def clear_terminal():
-    """"
-    Clear terminal
-    """
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-
-
-import random
-import word
-import os
-
-easy_level = word.easy_words
-medium_level = word.med_words
-hard_level = word.hard_words
-
 
 def clear_terminal():
     """"
@@ -97,30 +77,31 @@ def rules():
     menu = input(' ' * 12 + "Press enter to return to the main menu\n")
     print("\n")
     welcome()
-
-
-def play():
-    """
-    This functino will start the game and
-    set the game difficulty
-    """
-    clear_terminal()
-    title()
+    
+def set_difficulty():
+    
     print('\n')
     print('{:^80}'.format("Please select E for easy(10 lives),"))
     print('{:^80}'.format("M for medium 8 lives) and H for hard(6 lives)"))
-    difficulty_level = input(' ' * 25 + '\n').upper()
-    if difficulty_level == 'E':
-        lives = 10
-        word = random.choice(easy_level).upper()
-    elif difficulty_level == 'M':
-        lives = 8
-        word = random.choice(medium_level).upper()
-    elif difficulty_level == 'H':
-        lives = 6
-        word = random.choice(hard_level).upper()
-    else:
-        ("Plese select E, M or H")
+    difficulty = False
+    while not difficulty:
+        difficulty_level = input(' ' * 25 + '\n').upper()
+        if difficulty_level == 'E':
+            difficulty = True
+            lives = 10
+            return lives
+        elif difficulty_level == 'M':
+            difficulty = True
+            lives = 8
+            return lives
+        elif difficulty_level == 'H':
+            difficulty = True
+            lives = 6
+            return lives
+        else:
+            print('{:^80}'.format('Select E, M or H'))
+
+def play():
     
     clear_terminal()   
     blanks = "_" * len(word)
