@@ -6,6 +6,26 @@ easy_level = word.easy_words
 medium_level = word.med_words
 hard_level = word.hard_words
 
+text_align = os.get_terminal_size().columns
+
+
+
+def clear_terminal():
+    """"
+    Clear terminal
+    """
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+
+
+import random
+import word
+import os
+
+easy_level = word.easy_words
+medium_level = word.med_words
+hard_level = word.hard_words
+
 
 def clear_terminal():
     """"
@@ -28,7 +48,7 @@ def title():
                                     |___/
                 """
             )
-    print("\n")
+   
 
 def welcome():
     """
@@ -36,6 +56,7 @@ def welcome():
     """
     clear_terminal()
     title()
+    print('\n')
     print('{:^80}'.format(' 1 PLAY GAME '))
     print('{:^80}'.format(' 2 SEE RULES '))
     print('\n' * 4)
@@ -46,7 +67,9 @@ def welcome():
         elif player_choice == '2':
             rules()
         else:
-            print("You must chose 1 or 2")
+            print(' ' * 25 + 'You must chose 1 or 2')
+            print('\n')
+
 
 
 def rules():
@@ -83,6 +106,7 @@ def play():
     """
     clear_terminal()
     title()
+    print('\n')
     difficulty_level = input("Please select E for easy(10 lives), M for medium 8 lives) and H for hard(6 lives)\n").upper()
     if difficulty_level == 'E':
         lives = 10
@@ -103,12 +127,11 @@ def play():
     guessed_word = []
     title()
     print(display_hangman(lives))
-    print('\n')
     print('{:^75}'.format(blanks))
     print('\n')
     
     while not guessed and lives > 0:
-        player_guess = input(' ' * 28 + "Please guess a leter: ").upper()
+        player_guess = input(' ' * 25 + "Please guess a leter: ").upper()
         if len(player_guess) == 1 and player_guess.isalpha():
             if player_guess in guessed_letters:
                 clear_terminal()
@@ -158,18 +181,18 @@ def play():
         clear_terminal()
         title()
         print('{:^80}'.format("Congratulations you guessed the word"))
-        player_wins = input("Would you like to play again? Y/N \n").upper()
+        player_wins = input(' ' * 28 + "Would you like to play again? Y/N \n").upper()
         if player_wins == 'Y':
             play()
         elif player_wins == 'N':
             welcome()
         else:
-            print("You must press Y or N")
+            print('{:^80}'.format("You must press Y or N"))
     else:
         clear_terminal()
         title()
-        print("Sorry, you run out of lives")
-        player_lost = input("Would you like to play again? Y/N \n").upper()
+        print('{:^80}'.format("Sorry, you run out of lives"))
+        player_lost = input(' ' * 28 + "Would you like to play again? Y/N \n").upper()
         if player_lost == 'Y':
             play()
         elif player_lost == 'N':

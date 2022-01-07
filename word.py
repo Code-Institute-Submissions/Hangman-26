@@ -172,3 +172,8 @@ hard_words = ['everything', 'aboveboard', 'Washington', 'basketball',
               'voluminosity', 'rambunctious', 'colonization', 'interception',
               'championship', 'acquaintance', 'depreciation', 'consequences',
               'grandparents', 'intelligence', 'relationship']
+
+import os
+text_align = os.get_terminal_size().columns
+print("hello word".center(text_align))
+                                  
