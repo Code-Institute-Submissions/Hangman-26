@@ -107,7 +107,9 @@ def play():
     clear_terminal()
     title()
     print('\n')
-    difficulty_level = input("Please select E for easy(10 lives), M for medium 8 lives) and H for hard(6 lives)\n").upper()
+    print('{:^80}'.format("Please select E for easy(10 lives),"))
+    print('{:^80}'.format("M for medium 8 lives) and H for hard(6 lives)"))
+    difficulty_level = input(' ' * 25 + '\n').upper()
     if difficulty_level == 'E':
         lives = 10
         word = random.choice(easy_level).upper()
@@ -181,7 +183,7 @@ def play():
         clear_terminal()
         title()
         print('{:^80}'.format("Congratulations you guessed the word"))
-        player_wins = input(' ' * 28 + "Would you like to play again? Y/N \n").upper()
+        player_wins = input(' ' * 25 + "Would you like to play again? Y/N \n").upper()
         if player_wins == 'Y':
             play()
         elif player_wins == 'N':
@@ -192,7 +194,7 @@ def play():
         clear_terminal()
         title()
         print('{:^80}'.format("Sorry, you run out of lives"))
-        player_lost = input(' ' * 28 + "Would you like to play again? Y/N \n").upper()
+        player_lost = input(' ' * 25 + "Would you like to play again? Y/N \n").upper()
         if player_lost == 'Y':
             play()
         elif player_lost == 'N':
