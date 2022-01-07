@@ -122,6 +122,7 @@ def game(word, lives_num):
     title()
     print(display_hangman(lives_num))
     print('{:^75}'.format(blanks))
+    print(word)
     print('\n')
     
     while not guessed and lives_num > 0:
@@ -185,10 +186,10 @@ def game(word, lives_num):
     else:
         clear_terminal()
         title()
-        print('{:^80}'.format("Sorry, you run out of lives"))
+        print('{:^80}'.format(f"Sorry, you run out of lives the word was {word}"))
         player_lost = input(' ' * 25 + "Would you like to play again? Y/N \n").upper()
         if player_lost == 'Y':
-            play()
+            start_game()
         elif player_lost == 'N':
             welcome()
         else:
@@ -302,6 +303,8 @@ def display_hangman(lives):
     return stages[lives]
 
 def start_game():
+    clear_terminal()
+    title()
     lives_num = set_difficulty()
     word = random_word(lives_num)
     game(word, lives_num)
