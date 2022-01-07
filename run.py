@@ -43,7 +43,7 @@ def welcome():
     while True:
         player_choice = input(' ' * 25 + 'Please select 1 or 2: ')
         if player_choice == '1':
-            play()
+            start_game()
         elif player_choice == '2':
             rules()
         else:
@@ -111,21 +111,20 @@ def random_word(lives):
     elif lives == 6:
         word = random.choice(hard_level).upper()
         return word
-        
 
-def play():
-    
+
+def game(word, lives_num):
     clear_terminal()   
     blanks = "_" * len(word)
     guessed = False
     guessed_letters = []
     guessed_word = []
     title()
-    print(display_hangman(lives))
+    print(display_hangman(lives_num))
     print('{:^75}'.format(blanks))
     print('\n')
     
-    while not guessed and lives > 0:
+    while not guessed and lives_num > 0:
         player_guess = input(' ' * 25 + "Please guess a leter: ").upper()
         if len(player_guess) == 1 and player_guess.isalpha():
             if player_guess in guessed_letters:
@@ -136,7 +135,7 @@ def play():
                 clear_terminal()
                 title()
                 print('{:^80}'.format("Sorry "+ player_guess + " is not in the word"))
-                lives -= 1
+                lives_num -= 1
                 guessed_letters.append(player_guess)
             else:
                 clear_terminal()
@@ -159,7 +158,7 @@ def play():
                 clear_terminal()
                 title()
                 print('{:^80}'.format(player_guess + "is not in the word"))
-                lives -= 1
+                lives_num -= 1
                 guessed_word.append(player_guess)
             else:
                 guessed = True
@@ -168,7 +167,7 @@ def play():
             clear_terminal()
             title()
             print('{:^80}'.format("Not a valid guess"))
-        print(display_hangman(lives))
+        print(display_hangman(lives_num))
         print('{:^75}'.format(blanks))
         print('\n')
 
@@ -178,7 +177,7 @@ def play():
         print('{:^80}'.format("Congratulations you guessed the word"))
         player_wins = input(' ' * 25 + "Would you like to play again? Y/N \n").upper()
         if player_wins == 'Y':
-            play()
+            start_game()
         elif player_wins == 'N':
             welcome()
         else:
@@ -302,6 +301,10 @@ def display_hangman(lives):
     ]
     return stages[lives]
 
+def start_game():
+    lives_num = set_difficulty()
+    word = random_word(lives_num)
+    game(word, lives_num)
 
 def main():
     """
