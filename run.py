@@ -54,7 +54,7 @@ def welcome():
 
 def rules():
     """
-    Display rules after the title
+    Display rules
     """
     clear_terminal()
     title()
@@ -77,8 +77,13 @@ def rules():
     menu = input(' ' * 12 + "Press enter to return to the main menu\n")
     print("\n")
     welcome()
+
     
 def set_difficulty():
+    """
+    This function will set the dificulty level 
+    depending on the user input
+    """
     
     print('\n')
     print('{:^80}'.format("Please select E for easy(10 lives),"))
@@ -101,7 +106,13 @@ def set_difficulty():
         else:
             print('{:^80}'.format('Select E, M or H'))
 
+
+
 def random_word(lives):
+    """
+    This function wills pick random word form the word.py file 
+    depending on difficulty level 
+    """
     if lives == 10:
         word = random.choice(easy_level).upper()
         return word
@@ -114,6 +125,10 @@ def random_word(lives):
 
 
 def game(word, lives_num):
+    """
+    This fucntion will set the difficulty level
+    and start the game
+    """
     clear_terminal()   
     blanks = "_" * len(word)
     guessed = False
@@ -303,6 +318,9 @@ def display_hangman(lives):
     return stages[lives]
 
 def start_game():
+    """
+    This function will start the game
+    """
     clear_terminal()
     title()
     lives_num = set_difficulty()
