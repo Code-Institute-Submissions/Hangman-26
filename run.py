@@ -101,6 +101,18 @@ def set_difficulty():
         else:
             print('{:^80}'.format('Select E, M or H'))
 
+def random_word(lives):
+    if lives == 10:
+        word = random.choice(easy_level).upper()
+        return word
+    elif lives == 8:
+        word = random.choice(medium_level).upper()
+        return word
+    elif lives == 6:
+        word = random.choice(hard_level).upper()
+        return word
+        
+
 def play():
     
     clear_terminal()   
