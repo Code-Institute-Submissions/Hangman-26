@@ -155,20 +155,20 @@ def game(word, lives_num):
             if player_guess in guessed_letters:
                 clear_terminal()
                 title()
-                print(' ' * 25 + 'You already guessthe letter '
-                      + player_guess)
+                print(' ' * 25 + 'You already guessthe letter ' +
+                      player_guess)
             elif player_guess not in word:
                 clear_terminal()
                 title()
-                print(' ' * 25 + 'Sorry ' + player_guess
-                      + ' is not in the word')
+                print(' ' * 25 + 'Sorry ' + player_guess +
+                      ' is not in the word')
                 lives_num -= 1
                 guessed_letters.append(player_guess)
             else:
                 clear_terminal()
                 title()
-                print(' ' * 25 + 'Great ' + player_guess
-                      + ' is in the word!')
+                print(' ' * 25 + 'Great ' + player_guess +
+                      ' is in the word!')
                 guessed_letters.append(player_guess)
                 word_list = list(blanks)
                 indices = [i for (i, letter) in enumerate(word)
@@ -182,8 +182,8 @@ def game(word, lives_num):
             if player_guess in guessed_word:
                 clear_terminal()
                 title()
-                print(' ' * 25 + 'You already guessedthe word '
-                      + player_guess)
+                print(' ' * 25 + 'You already guessedthe word ' +
+                      player_guess)
             elif player_guess != word:
                 clear_terminal()
                 title()
@@ -206,8 +206,8 @@ def game(word, lives_num):
         title()
         print('Congratulations you guessed the word'.center(80))
         while True:
-            player_wins = input(' ' * 25
-                                + 'Would you like to play again? Y/N '
+            player_wins = input(' ' * 25 +
+                                'Would you like to play again? Y/N '
                                 ).upper()
             print('\n')
             if player_wins == 'Y':
@@ -219,11 +219,11 @@ def game(word, lives_num):
     else:
         clear_terminal()
         title()
-        print(' ' * 20 + 'Sorry, you run out of lives. The word was: '
-              + word)
+        print(' ' * 20 + 'Sorry, you run out of lives. The word was: ' +
+              word)
         while True:
-            player_lost = input(' ' * 20
-                                + 'Would you liketo play again? Y/N '
+            player_lost = input(' ' * 20 +
+                                'Would you liketo play again? Y/N '
                                 ).upper()
             print('\n')
             if player_lost == 'Y':
