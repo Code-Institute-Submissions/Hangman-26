@@ -83,7 +83,7 @@ def rules():
             """
             )
 
-    menu = input(' ' * 12 + "Press enter to return to the main menu\n")
+    input(' ' * 12 + "Press enter to return to the main menu\n")
     print("\n")
     welcome()
 
@@ -96,7 +96,7 @@ def set_difficulty():
 
     print('\n')
     print('Please select E for easy(10 lives),'.center(80))
-    print('M for medium 8 lives) and H for hard(6 lives)'.center(80))
+    print('M for medium (8 lives) and H for hard(6 lives)'.center(80))
     difficulty = False
     while not difficulty:
         difficulty_level = input(' '.center(40)).upper()
