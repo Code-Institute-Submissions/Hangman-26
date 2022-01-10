@@ -1,15 +1,16 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 """
 Project porfolio 3, Code Institute
 """
+
 import random
 import os
 import words
 
-
 easy_level = words.easy_words
 medium_level = words.med_words
 hard_level = words.hard_words
-
 
 width = os.get_terminal_size().columns
 
@@ -18,7 +19,8 @@ def clear_terminal():
     """"
     Clear terminal
     """
-    os.system('cls' if os.name == 'nt' else 'clear')
+
+    os.system(('cls' if os.name == 'nt' else 'clear'))
 
 
 def title():
@@ -41,6 +43,7 @@ def welcome():
     """
     Display a welcome title and navigate to start the game or see rules
     """
+
     clear_terminal()
     title()
     print('\n')
@@ -60,7 +63,7 @@ def welcome():
 
 def rules():
     """
-    Display rules
+    Display rules after the title
     """
     clear_terminal()
     title()
@@ -80,7 +83,7 @@ def rules():
             """
             )
 
-    menu = input(' ' * 12 + "Press enter to return to the main menu ")
+    menu = input(' ' * 12 + "Press enter to return to the main menu\n")
     print("\n")
     welcome()
 
@@ -92,11 +95,11 @@ def set_difficulty():
     """
 
     print('\n')
-    print("Please select E for easy(10 lives),".center(80))
-    print("M for medium 8 lives) and H for hard(6 lives)".center(80))
+    print('Please select E for easy(10 lives),'.center(80))
+    print('M for medium 8 lives) and H for hard(6 lives)'.center(80))
     difficulty = False
     while not difficulty:
-        difficulty_level = input(" ".center(40)).upper()
+        difficulty_level = input(' '.center(40)).upper()
         if difficulty_level == 'E':
             difficulty = True
             lives = 10
@@ -134,8 +137,9 @@ def game(word, lives_num):
     This fucntion will set the difficulty level
     and start the game
     """
+
     clear_terminal()
-    blanks = "_" * len(word)
+    blanks = '_' * len(word)
     guessed = False
     guessed_letters = []
     guessed_word = []
@@ -145,45 +149,45 @@ def game(word, lives_num):
     print('\n')
 
     while not guessed and lives_num > 0:
-        player_guess = input(' ' * 25 + "Please guess"
-                             " a leter: ").upper()
+        player_guess = input(' ' * 25 + 'Please guess a leter: '
+                             ).upper()
         if len(player_guess) == 1 and player_guess.isalpha():
             if player_guess in guessed_letters:
                 clear_terminal()
                 title()
-                print(' ' * 25 + "You already guess"
-                      "the letter " + player_guess)
+                print(' ' * 25 + 'You already guessthe letter '
+                      + player_guess)
             elif player_guess not in word:
                 clear_terminal()
                 title()
-                print(' ' * 25 + "Sorry " + player_guess +
-                      " is not in the word")
+                print(' ' * 25 + 'Sorry ' + player_guess
+                      + ' is not in the word')
                 lives_num -= 1
                 guessed_letters.append(player_guess)
             else:
                 clear_terminal()
                 title()
-                print(' ' * 25 + "Great " + player_guess +
-                      " is in the word!")
+                print(' ' * 25 + 'Great ' + player_guess
+                      + ' is in the word!')
                 guessed_letters.append(player_guess)
                 word_list = list(blanks)
-                indices = [i for i, letter in enumerate(word)
+                indices = [i for (i, letter) in enumerate(word)
                            if letter == player_guess]
                 for index in indices:
                     word_list[index] = player_guess
-                blanks = "".join(word_list)
-                if "_" not in blanks:
+                blanks = ''.join(word_list)
+                if '_' not in blanks:
                     guessed = True
         elif len(player_guess) == len(word) and player_guess.isalpha():
             if player_guess in guessed_word:
                 clear_terminal()
                 title()
-                print(' ' * 25 + "You already guessed"
-                      "the word " + player_guess)
+                print(' ' * 25 + 'You already guessedthe word '
+                      + player_guess)
             elif player_guess != word:
                 clear_terminal()
                 title()
-                print(' ' * 25 + player_guess + "is not in the word")
+                print(' ' * 25 + player_guess + 'is not in the word')
                 lives_num -= 1
                 guessed_word.append(player_guess)
             else:
@@ -192,7 +196,7 @@ def game(word, lives_num):
         else:
             clear_terminal()
             title()
-            print(' ' * 25 + "Not a valid guess")
+            print(' ' * 25 + 'Not a valid guess')
         print(display_hangman(lives_num))
         print(blanks.center(76))
         print('\n')
@@ -200,26 +204,28 @@ def game(word, lives_num):
     if guessed:
         clear_terminal()
         title()
-        print("Congratulations you guessed the word".center(80))
+        print('Congratulations you guessed the word'.center(80))
         while True:
-            player_wins = input(' ' * 25 + "Would you like to"
-                                " play again? Y/N ").upper()
-            print("\n")
+            player_wins = input(' ' * 25
+                                + 'Would you like to play again? Y/N '
+                                ).upper()
+            print('\n')
             if player_wins == 'Y':
                 start_game()
             elif player_wins == 'N':
                 welcome()
             else:
-                print("You must press Y or N".center(80))
+                print('You must press Y or N'.center(80))
     else:
         clear_terminal()
         title()
-        print(' ' * 20 + "Sorry, you run out"
-              " of lives. The word was: " + word)
+        print(' ' * 20 + 'Sorry, you run out of lives. The word was: '
+              + word)
         while True:
-            player_lost = input(' ' * 20 + "Would you like"
-                                "to play again? Y/N ").upper()
-            print("\n")
+            player_lost = input(' ' * 20
+                                + 'Would you liketo play again? Y/N '
+                                ).upper()
+            print('\n')
             if player_lost == 'Y':
                 start_game()
                 break
@@ -227,15 +233,16 @@ def game(word, lives_num):
                 welcome()
                 break
             else:
-                print("You must press Y or N".center(80))
+                print('You must press Y or N'.center(80))
 
 
 def display_hangman(lives):
     """
     Hangman lives
     """
+
     stages = [
-                                    """
+        """
                                     _________
                                     |/      |
                                     |       O
@@ -244,8 +251,7 @@ def display_hangman(lives):
                                     |      / \\
                                 ____|_\\___
                                     """,
-
-                                    """
+        """
                                     _________
                                     |/      |
                                     |       O
@@ -254,7 +260,7 @@ def display_hangman(lives):
                                     |      /
                                 ____|_\\___
                                     """,
-                                    """
+        """
                                     _________
                                     |/      |
                                     |       O
@@ -263,7 +269,7 @@ def display_hangman(lives):
                                     |
                                 ____|_\\___
                                     """,
-                                    """
+        """
                                     _________
                                     |/      |
                                     |       O
@@ -272,7 +278,7 @@ def display_hangman(lives):
                                     |
                                 ____|_\\___
                                     """,
-                                    """
+        """
                                     _________
                                     |/      |
                                     |       O
@@ -281,7 +287,7 @@ def display_hangman(lives):
                                     |
                                 ____|_\\___
                                     """,
-                                    """
+        """
                                     _________
                                     |/      |
                                     |       O
@@ -290,7 +296,7 @@ def display_hangman(lives):
                                     |
                                 ____|_\\___
                                     """,
-                                    """
+        """
                                     _________
                                     |/      |
                                     |
@@ -299,7 +305,7 @@ def display_hangman(lives):
                                     |
                                 ____|_\\___
                                     """,
-                                    """
+        """
                                     _________
                                     |/
                                     |
@@ -308,7 +314,7 @@ def display_hangman(lives):
                                     |
                                 ____|_\\___
                                     """,
-                                    """
+        """
                                     |/
                                     |
                                     |
@@ -316,7 +322,7 @@ def display_hangman(lives):
                                     |
                                 ____|_\\___
                                     """,
-                                    """
+        """
 
 
 
@@ -324,13 +330,13 @@ def display_hangman(lives):
 
                                 ___________
                                     """,
-                                    """
+        """
 
 
 
-                                    """
+                                    """,
+        ]
 
-    ]
     return stages[lives]
 
 
@@ -338,6 +344,7 @@ def start_game():
     """
     This function will start the game
     """
+
     clear_terminal()
     title()
     lives_num = set_difficulty()
@@ -349,6 +356,7 @@ def main():
     """
     Main function
     """
+
     welcome()
 
 
