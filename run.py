@@ -140,14 +140,14 @@ def game(word, lives_num):
     guessed_word = []
     title()
     print(display_hangman(lives_num))
-    print(f" ".join(blanks).center(76))
+    print(" ".join(blanks).center(76))
     print('\n')
-    
-
     while not guessed and lives_num > 0:
+        print(f"Lives: {lives_num}".center(76))
         player_guess = input(' ' * 25 + 'Please guess a letter: '
                              ).upper()
         if len(player_guess) == 1 and player_guess.isalpha():
+            print(f"Lives: {lives_num}".center(76))
             if player_guess in guessed_letters:
                 clear_terminal()
                 title()
@@ -194,7 +194,7 @@ def game(word, lives_num):
             title()
             print('Not a valid guess'.center(80))
         print(display_hangman(lives_num))
-        print(f" ".join(blanks).center(76))
+        print(" ".join(blanks).center(76))
         print('\n')
 
     if guessed:
