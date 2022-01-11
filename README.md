@@ -8,6 +8,8 @@ Users can try to beat the computer by guessing the letters of the missing word. 
 <img src="readme-assets/images/responsive-hangman.png" width="800" height="100%">
 </p>
 
+You can view the deployed website [here](https://hangman-fun-game.herokuapp.com/)
+
 # How to play
 
 It's a popular word guessing game where the player attempts to build a missing word by guessing one letter at a time. 
