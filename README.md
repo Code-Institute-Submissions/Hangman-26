@@ -153,4 +153,8 @@ The [PEP8 Validator](http://pep8online.com/checkresult) and [Python Code Checker
 
 # Credits
 
+- [Code Institute](https://codeinstitute.net/) for the mock terminal for the deploy to a live site.
+- [Hangman-youtube-tutorial Kite](https://www.youtube.com/watch?v=m4nEnsavl6w) inspiration on how to build a hangman game. 
+- [ASCII Art Generator](https://patorjk.com/software/taag/#p=display&f=Standard&t=Hangman) for creating word art for game title.
+ 
 
