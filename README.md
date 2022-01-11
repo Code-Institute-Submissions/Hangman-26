@@ -115,9 +115,27 @@ Game ends if the player correctly guess all the letters of the missing word or i
     - I fixed the error by removing the menu varible
 - The title does not appear on the new page
     - I fixed the error by calling the clear_termina function before the title function
+
+
+
 # Technologies Used
+- Languages 
+    - Python
+
 # Testing
+## Validators
+The [PEP8 Validator](http://pep8online.com/checkresult) and [Python Code Checker](https://extendsclass.com/python-tester.html) were used to check my code for syntax errors in this project.
+
+<p align="center">
+<img src="readme-assets/images/python-validator.png" width="500px" height="100">
+</p>
+
+- Manually tested user inputs by purposefully inputing incorrect data to confirm error messages where capturing wrong inputs
+
+- Tested in the local terminal and on the mock terminal on the deployment site on Heroku 
+
 # Deployment 
+
 # Credits
 
 
