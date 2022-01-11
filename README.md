@@ -16,10 +16,10 @@ It's a popular word guessing game where the player attempts to build a missing w
 
 The player must guess the letters of the hidden word, if the guess is correct, the letter missing in the word is replaced by the correct letter.
 
-If the player puts an incorrect letter the error message is displayes and the player is asked to resubmit their choce. Each wrong guess takes 1 life. 
+If the player puts an incorrect letter, the error message is displayes and the player is asked to resubmit their choce. Each wrong guess takes 1 life. 
 
 
-Game ends if the player correctly guess all the letters of the missing word or if the player loses all his lives.
+Game ends if the player correctly guesses all the letters of the missing word or if the player loses all his lives.
 
 # User Stories 
 
@@ -72,12 +72,12 @@ Game ends if the player correctly guess all the letters of the missing word or i
 <img src="readme-assets/images/final-rules.png" width="600px" height="400">
 </p>
 
-- Difficulty Level - by selecting number one from the main menu user can also select the diffculty level and start the game 
+- Difficulty Level - by selecting number one from the main menu user can also select the difficulty level and start the game 
 <p align="center">
 <img src="readme-assets/images/final-difficulty-level.png" width="600px" height="400">
 </p>
 
-- Game - the game will start by slectig the game difficulty. Random word will be selected from a list of selected words
+- Game - the game will start by selecting the game difficulty. Random word will be selected from a list of selected words
 <p align="center">
 <img src="readme-assets/images/final-game.png" width="400px" height="400">
 </p>
@@ -93,7 +93,7 @@ Game ends if the player correctly guess all the letters of the missing word or i
 <img src="readme-assets/images/letter-already-guessed.png" width="400px" height="100">
 </p>
 
-- Invalid inputs - to be sure that the user provide the correct input, for any invalid input the error massage will appear. 
+- Invalid inputs - to be sure that the user provided  the correct input. For any invalid input, the error message  will appear. 
 
 * Please select 1 or 2
 * Select E, M or H
@@ -113,8 +113,8 @@ Game ends if the player correctly guess all the letters of the missing word or i
 - I used print ('{:^80}'.format which caused the error: 
 "Formatting a regular string which could be a f-string"
     - I fixed the error by using the .center(width) method 
-- Error - rules page. Creating a menu varible with input("Press enter to return to the main menu) caused the error : "local variable 'menu' is assigned to but never used"
-    - I fixed the error by removing the menu varible
+- Error - rules page. Creating a menu variable with input("Press enter to return to the main menu) caused the error : "local variable 'menu' is assigned to but never used"
+    - I fixed the error by removing the menu variable
 - The title does not appear on the new page
     - I fixed the error by calling the clear_termina function before the title function
 
