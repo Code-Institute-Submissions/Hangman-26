@@ -155,7 +155,7 @@ def game(word, lives_num):
             if player_guess in guessed_letters:
                 clear_terminal()
                 title()
-                print(' ' * 25 + 'You already guessthe letter ' +
+                print(' ' * 25 + 'You already guess the letter ' +
                       player_guess)
             elif player_guess not in word:
                 clear_terminal()
@@ -182,7 +182,7 @@ def game(word, lives_num):
             if player_guess in guessed_word:
                 clear_terminal()
                 title()
-                print(' ' * 25 + 'You already guessedthe word ' +
+                print(' ' * 25 + 'You already guessed the word ' +
                       player_guess)
             elif player_guess != word:
                 clear_terminal()

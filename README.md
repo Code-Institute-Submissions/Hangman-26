@@ -88,7 +88,7 @@ Game ends if the player correctly guess all the letters of the missing word or i
 <img src="readme-assets/images/final-letter-not-in.png" width="400px" height="100">
 </p>
 <p align="center">
-<img src="readme-assets/images/final-already-guessed.png" width="400px" height="50">
+<img src="readme-assets/images/already-guessed.png" width="400px" height="50">
 </p>
 
 - Invalid inputs - to be sure that the user provide the correct input, for any invalid input the error massage will appear. 
