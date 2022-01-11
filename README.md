@@ -79,7 +79,7 @@ Game ends if the player correctly guess all the letters of the missing word or i
 
 - Game - the game will start by slectig the game difficulty. Random word will be selected from a list of selected words
 <p align="center">
-<img src="readme-assets/images/final-game-start.png" width="600px" height="400">
+<img src="readme-assets/images/final-game.png" width="400px" height="400">
 </p>
 
 - User Input - the player is asked to guess a letter. If the entry is correct, the letter will appear in the word, if the entry is incorrect, the user will lose one life and the hangman will start drawing.

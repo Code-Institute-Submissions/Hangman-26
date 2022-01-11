@@ -23,15 +23,15 @@ def title():
     Display the title
     """
     print(
-                """
-                 _   _
-                | | | | __ _ _ __   __ _ _ __ ___   __ _ _ __
-                | |_| |/ _` | '_ \\ / _` | '_ ` _ \\ / _` | '_ \\
-                |  _  | (_| | | | | (_| | | | | | | (_| | | | |
-                |_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|
-                                    |___/
-                """
-            )
+        """
+                    _  _
+                   | || | __ _  _ _   __ _  _ __   __ _  _ _
+                   | __ |/ _` || ' \\ / _` || '  \\ / _` || ' \\
+                   |_||_|\\__,_||_||_|\\__, ||_|_|_|\\__,_||_||_|
+                                      |___/
+
+        """
+    )
 
 
 def welcome():
@@ -147,7 +147,6 @@ def game(word, lives_num):
         player_guess = input(' ' * 25 + 'Please guess a letter: '
                              ).upper()
         if len(player_guess) == 1 and player_guess.isalpha():
-            print(f"Lives: {lives_num}".center(76))
             if player_guess in guessed_letters:
                 clear_terminal()
                 title()
