@@ -98,11 +98,11 @@ Game ends if the player correctly guess all the letters of the missing word or i
 * Not a valid guess
 * You must press Y or N
 
-![](readme-assets/images/home-page-error.png)
-![](readme-assets/images/difficulty-level-error.png)
-![](readme-assets/images/final-not-valid.png)
-![](readme-assets/images/game-over-error.png)
-
+![](readme-assets/images/error1.png)
+![](readme-assets/images/error2.png)
+![](readme-assets/images/error3.png)
+![](readme-assets/images/error4.png)
+![](readme-assets/images/error5.png)
 
 
 
