@@ -196,7 +196,7 @@ def game(word, lives_num):
         else:
             clear_terminal()
             title()
-            print(' ' * 25 + 'Not a valid guess')
+            print('Not a valid guess'.center(80))
         print(display_hangman(lives_num))
         print(blanks.center(76))
         print('\n')
