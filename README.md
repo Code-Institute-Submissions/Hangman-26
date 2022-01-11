@@ -104,8 +104,17 @@ Game ends if the player correctly guess all the letters of the missing word or i
 ![](readme-assets/images/error4.png)
 
 
-
 # Issues and Bugs
+ - Error message line too long
+    - I fixed the error by splitting the string into two lines
+
+- I used print ('{:^80}'.format which caused the error: 
+"Formatting a regular string which could be a f-string"
+    - I fixed the error by using the .center(width) method 
+- Error - rules page. Creating a menu varible with input("Press enter to return to the main menu) caused the error : "local variable 'menu' is assigned to but never used"
+    - I fixed the error by removing the menu varible
+- The title does not appear on the new page
+    - I fixed the error by calling the clear_termina function before the title function
 # Technologies Used
 # Testing
 # Deployment 

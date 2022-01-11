@@ -1,9 +1,6 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 """
 Project porfolio 3, Code Institute
 """
-
 import random
 import os
 import words
@@ -11,8 +8,6 @@ import words
 easy_level = words.easy_words
 medium_level = words.med_words
 hard_level = words.hard_words
-
-width = os.get_terminal_size().columns
 
 
 def clear_terminal():
@@ -230,10 +225,8 @@ def game(word, lives_num):
             print('\n')
             if player_lost == 'Y':
                 start_game()
-                break
             elif player_lost == 'N':
                 welcome()
-                break
             else:
                 print('You must press Y or N'.center(80))
 
