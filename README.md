@@ -61,12 +61,45 @@ Game ends if the player correctly guess all the letters of the missing word or i
 <p align="center">
 <img src="readme-assets/images/final-home-page.png" width="600px" height="400">
 </p>
+
 - Game rules - the user can see the game rules by selecting number two from the main menu
-- Play Game - the user can start the game by selecting number one from the main menu 
-- Difficulty Level - by selecting number one from the main menu user can also select the diffculty level and  start the game 
-- Random word - a random word is selected from a list of selected words
+<p align="center">
+<img src="readme-assets/images/final-rules.png" width="600px" height="400">
+</p>
+
+- Difficulty Level - by selecting number one from the main menu user can also select the diffculty level and start the game 
+<p align="center">
+<img src="readme-assets/images/final-difficulty-level.png" width="600px" height="400">
+</p>
+
+- Game - the game will start by slectig the game difficulty. Random word will be selected from a list of selected words
+<p align="center">
+<img src="readme-assets/images/final-game-start.png" width="600px" height="400">
+</p>
+
 - User Input - the player is asked to guess a letter. If the entry is correct, the letter will appear in the word, if the entry is incorrect, the user will lose one life and the hangman will start drawing.
+<p align="center">
+<img src="readme-assets/images/final-letter-in.png" width="400px" height="100">
+</p>
+<p align="center">
+<img src="readme-assets/images/final-letter-not-in.png" width="400px" height="100">
+</p>
+<p align="center">
+<img src="readme-assets/images/final-already-guessed.png" width="400px" height="50">
+</p>
+
 - Invalid inputs - to be sure that the user provide the correct input, for any invalid input the error massage will appear. 
+
+* Please select 1 or 2
+* Select E, M or H
+* Not a valid guess
+* You must press Y or N
+
+![](readme-assets/images/home-page-error.png)
+![](readme-assets/images/difficulty-level-error.png)
+![](readme-assets/images/final-not-valid.png)
+![](readme-assets/images/game-over-error.png)
+
 
 
 
