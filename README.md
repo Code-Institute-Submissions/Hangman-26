@@ -102,7 +102,6 @@ Game ends if the player correctly guess all the letters of the missing word or i
 ![](readme-assets/images/error2.png)
 ![](readme-assets/images/error3.png)
 ![](readme-assets/images/error4.png)
-![](readme-assets/images/error5.png)
 
 
 
