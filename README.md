@@ -54,10 +54,13 @@ Game ends if the player correctly guess all the letters of the missing word or i
 <p align="center">
 <img src="readme-assets/images/game.png" width="700px" height="500">
 </p>
+
 # Features
 
-- Game rules - the user can see the game rules at the top of the page
-- Choose a game difficulty - ... 
+- Welcome Screen - User can choose between starting the game or see the rules
+- Game rules - the user can see the game rules by selecting number two from the main menu
+- Play Game - the user can start the game by selecting number one from the main menu 
+- Difficulty Level - by selecting number one from the main menu user can also select the diffculty level and  start the game 
 - Random word - a random word is selected from a list of selected words
 - User Input - the player is asked to guess a letter. If the entry is correct, the letter will appear in the word, if the entry is incorrect, the user will lose one life and the hangman will start drawing.
 - Invalid inputs - to be sure that the user provide the correct input, for any invalid input the error massage will appear. 
