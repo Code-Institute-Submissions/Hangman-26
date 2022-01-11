@@ -135,6 +135,21 @@ The [PEP8 Validator](http://pep8online.com/checkresult) and [Python Code Checker
 - Tested in the local terminal and on the mock terminal on the deployment site on Heroku 
 
 # Deployment 
+### The project was deployed using Code Institute mock terminal for Heroku.
+
+### Steps to deploy:
+- Fork or clone this repository
+- Ensure the Procfile is in place
+- Create a new app in [Heroku](https://id.heroku.com/login)
+- Select "New" and "Create new app"
+- Name the new app and click "Create new app"
+- In "Settings" select "BuildPacks" and select Python and Node.js
+- While still in "Settings", click "Reveal Config Vars" and input the following. KEY: PORT, VALUE: 8000. Nothing else is needed here as this project does not have any sensitive files.
+- Click on "Deploy" and select your deploy method and repository.
+- Click "Connect" on selected repository.
+- Either choose "Enable Automatic Deploys" or "Deploy Branch" in the manual deploy section.
+- Heroku will now deploy the site.
+
 
 # Credits
 
