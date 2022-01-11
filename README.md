@@ -31,7 +31,29 @@ Game ends if the player correctly guess all the letters of the missing word or i
 <img src="readme-assets/images/flowchart-hangman.png" width="1000px" height="1000">
 </p>
 
+## Wireframes
 
+## Home Page
+
+<p align="center">
+<img src="readme-assets/images/home-page.png" width="700px" height="500">
+</p>
+
+## Rules
+
+<p align="center">
+<img src="readme-assets/images/rules.png" width="700px" height="500">
+</p>
+
+## Select difficulty level
+<p align="center">
+<img src="readme-assets/images/difficulty-level.png" width="700px" height="500">
+</p>
+
+## Game
+<p align="center">
+<img src="readme-assets/images/game.png" width="700px" height="500">
+</p>
 # Features
 
 - Game rules - the user can see the game rules at the top of the page

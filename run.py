@@ -205,6 +205,7 @@ def game(word, lives_num):
         clear_terminal()
         title()
         print('Congratulations you guessed the word'.center(80))
+        print("\n")
         while True:
             player_wins = input(' ' * 25 +
                                 'Would you like to play again? Y/N '
@@ -221,6 +222,7 @@ def game(word, lives_num):
         title()
         print(' ' * 20 + 'Sorry, you run out of lives. The word was: ' +
               word)
+        print("\n")
         while True:
             player_lost = input(' ' * 20 +
                                 'Would you liketo play again? Y/N '
