@@ -4,6 +4,9 @@ Hangman is a Python terminal game, which runs in the Code Institute mock termina
 
 Users can try to beat the computer by guessing the letters of the missing word. Every wrong guess takes one life. The game is over if the user guesses all the missing letters of the hidden word or if he loses all his lives.
 
+<p align="center">
+<img src="readme-assets/images/responsive-hangman.png" width="800" height="100%">
+</p>
 
 # How to play
 
