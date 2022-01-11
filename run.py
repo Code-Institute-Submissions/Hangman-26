@@ -225,7 +225,7 @@ def game(word, lives_num):
         print("\n")
         while True:
             player_lost = input(' ' * 20 +
-                                'Would you liketo play again? Y/N '
+                                'Would you like to play again? Y/N '
                                 ).upper()
             print('\n')
             if player_lost == 'Y':
