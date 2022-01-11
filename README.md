@@ -41,23 +41,23 @@ Game ends if the player correctly guess all the letters of the missing word or i
 ## Home Page
 
 <p align="center">
-<img src="readme-assets/images/home-page.png" width="700px" height="500">
+<img src="readme-assets/images/wireframe-home-page.png" width="700px" height="500">
 </p>
 
 ## Rules
 
 <p align="center">
-<img src="readme-assets/images/rules.png" width="700px" height="500">
+<img src="readme-assets/images/wireframe-rules.png" width="700px" height="500">
 </p>
 
 ## Select difficulty level
 <p align="center">
-<img src="readme-assets/images/difficulty-level.png" width="700px" height="500">
+<img src="readme-assets/images/wireframe-difficulty-level.png" width="700px" height="500">
 </p>
 
 ## Game
 <p align="center">
-<img src="readme-assets/images/game.png" width="700px" height="500">
+<img src="readme-assets/images/wireframe-game.png" width="700px" height="500">
 </p>
 
 # Features
