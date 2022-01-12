@@ -17,6 +17,7 @@ def clear_terminal():
     """
 
     os.system(('cls' if os.name == 'nt' else 'clear'))
+    title()
 
 
 def title():
@@ -39,9 +40,7 @@ def welcome():
     """
     Display a welcome title and navigate to start the game or see rules
     """
-
     clear_terminal()
-    title()
     print('\n')
     print(' 1 PLAY GAME '.center(80))
     print(' 2 SEE RULES '.center(80))
@@ -62,7 +61,6 @@ def rules():
     Display rules after the title
     """
     clear_terminal()
-    title()
     print(
         """
             To play the game you must guess the letters of the hidden word.
@@ -137,7 +135,6 @@ def game(word, lives_num):
     guessed = False
     guessed_letters = []
     guessed_word = []
-    title()
     print(display_hangman(lives_num))
     print(" ".join(blanks).center(76))
     print('\n')
@@ -148,19 +145,16 @@ def game(word, lives_num):
         if len(player_guess) == 1 and player_guess.isalpha():
             if player_guess in guessed_letters:
                 clear_terminal()
-                title()
                 print(' ' * 25 + 'You already guess the letter ' +
                       player_guess)
             elif player_guess not in word:
                 clear_terminal()
-                title()
                 print(' ' * 25 + 'Sorry ' + player_guess +
                       ' is not in the word')
                 lives_num -= 1
                 guessed_letters.append(player_guess)
             else:
                 clear_terminal()
-                title()
                 print(' ' * 25 + 'Great ' + player_guess +
                       ' is in the word!')
                 guessed_letters.append(player_guess)
@@ -175,12 +169,10 @@ def game(word, lives_num):
         elif len(player_guess) == len(word) and player_guess.isalpha():
             if player_guess in guessed_word:
                 clear_terminal()
-                title()
                 print(' ' * 25 + 'You already guessed the word ' +
                       player_guess)
             elif player_guess != word:
                 clear_terminal()
-                title()
                 print(' ' * 25 + player_guess + 'is not in the word')
                 lives_num -= 1
                 guessed_word.append(player_guess)
@@ -189,7 +181,6 @@ def game(word, lives_num):
                 blanks = word
         else:
             clear_terminal()
-            title()
             print('Not a valid guess'.center(80))
         print(display_hangman(lives_num))
         print(" ".join(blanks).center(76))
@@ -197,13 +188,11 @@ def game(word, lives_num):
 
     if guessed:
         clear_terminal()
-        title()
         print('Congratulations you guessed the word'.center(80))
         print("\n")
         play_again()
     else:
         clear_terminal()
-        title()
         print(' ' * 20 + 'Sorry, you run out of lives. The word was: ' +
               word)
         print("\n")
@@ -234,7 +223,6 @@ def start_game():
     """
 
     clear_terminal()
-    title()
     lives_num = set_difficulty()
     get_random_word = random_word(lives_num)
     game(get_random_word, lives_num)
