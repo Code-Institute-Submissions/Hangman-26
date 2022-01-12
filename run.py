@@ -24,7 +24,7 @@ def title():
     Display the title
     """
     print(
-        """        
+        """
                     _  _
                    | || | __ _  _ _   __ _  _ __   __ _  _ _
                    | __ |/ _` || ' \\ / _` || '  \\ / _` || ' \\
@@ -75,8 +75,7 @@ def rules():
             """
             )
 
-    input(' ' * 12 + "Press enter to return to the main menu\n")
-    print("\n")
+    input(' ' * 12 + "Press enter to return to the main menu")
     welcome()
 
 
