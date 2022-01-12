@@ -4,6 +4,7 @@ Project porfolio 3, Code Institute
 import random
 import os
 import words
+from hangman_lives import display_hangman
 
 EASY_LEVEL = words.easy_words
 MEDIUM_LEVEL = words.med_words
@@ -225,110 +226,6 @@ def play_again():
             welcome()
         else:
             print('You must press Y or N'.center(80))
-
-
-def display_hangman(lives):
-    """
-    Hangman lives
-    """
-
-    stages = [
-        """
-                                    _________
-                                    |/      |
-                                    |       O
-                                    |     --|--
-                                    |       |
-                                    |      / \\
-                                ____|_\\___
-                                    """,
-        """
-                                    _________
-                                    |/      |
-                                    |       O
-                                    |     --|--
-                                    |       |
-                                    |      /
-                                ____|_\\___
-                                    """,
-        """
-                                    _________
-                                    |/      |
-                                    |       O
-                                    |     --|--
-                                    |       |
-                                    |
-                                ____|_\\___
-                                    """,
-        """
-                                    _________
-                                    |/      |
-                                    |       O
-                                    |     --|
-                                    |       |
-                                    |
-                                ____|_\\___
-                                    """,
-        """
-                                    _________
-                                    |/      |
-                                    |       O
-                                    |       |
-                                    |       |
-                                    |
-                                ____|_\\___
-                                    """,
-        """
-                                    _________
-                                    |/      |
-                                    |       O
-                                    |
-                                    |
-                                    |
-                                ____|_\\___
-                                    """,
-        """
-                                    _________
-                                    |/      |
-                                    |
-                                    |
-                                    |
-                                    |
-                                ____|_\\___
-                                    """,
-        """
-                                    _________
-                                    |/
-                                    |
-                                    |
-                                    |
-                                    |
-                                ____|_\\___
-                                    """,
-        """
-                                    |/
-                                    |
-                                    |
-                                    |
-                                    |
-                                ____|_\\___
-                                    """,
-        """
-
-
-
-
-
-                                ___________
-                                    """,
-        """
-
-
-
-                                    """,
-        ]
-
-    return stages[lives]
 
 
 def start_game():
