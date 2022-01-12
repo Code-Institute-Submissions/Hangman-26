@@ -75,7 +75,7 @@ def rules():
             """
             )
 
-    input(' ' * 12 + "Press enter to return to the main menu")
+    input(' ' * 12 + "Press enter to return to the main menu\n")
     welcome()
 
 
