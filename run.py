@@ -15,7 +15,6 @@ def clear_terminal():
     """"
     Clear terminal
     """
-
     os.system(('cls' if os.name == 'nt' else 'clear'))
     title()
 
@@ -25,13 +24,12 @@ def title():
     Display the title
     """
     print(
-        """
+        """        
                     _  _
                    | || | __ _  _ _   __ _  _ __   __ _  _ _
                    | __ |/ _` || ' \\ / _` || '  \\ / _` || ' \\
                    |_||_|\\__,_||_||_|\\__, ||_|_|_|\\__,_||_||_|
                                       |___/
-
         """
     )
 
