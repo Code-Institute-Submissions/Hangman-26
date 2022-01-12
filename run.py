@@ -64,7 +64,7 @@ def rules():
     print(
         """
             To play the game you must guess the letters of the hidden word.
-            If the guess is correct the letter missing in the word
+            If the guess is correct, the letter missing in the word
             is replaced by the correct letter.
             You can enter the whole word if you know what the word is.
             Each wrong guess takes one life.
@@ -110,7 +110,7 @@ def set_difficulty():
 
 def random_word(lives):
     """
-    Set the random word depending on users difficulty level
+    Set the random word depending on user difficulty level
     """
 
     if lives == 10:
