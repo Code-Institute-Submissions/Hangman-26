@@ -5,9 +5,9 @@ import random
 import os
 import words
 
-easy_level = words.easy_words
-medium_level = words.med_words
-hard_level = words.hard_words
+EASY_LEVEL = words.easy_words
+MEDIUM_LEVEL = words.med_words
+HARD_LEVEL = words.hard_words
 
 
 def clear_terminal():
@@ -46,7 +46,7 @@ def welcome():
     print(' 2 SEE RULES '.center(80))
     print('\n' * 4)
     while True:
-        player_choice = input(' ' * 25 + 'Please select 1 or 2: ')
+        player_choice = input(' ' * 28 + 'Please select 1 or 2: ')
         if player_choice == '1':
             start_game()
         elif player_choice == '2':
@@ -98,17 +98,15 @@ def set_difficulty():
         if difficulty_level == 'E':
             difficulty = True
             lives = 10
-            return lives
         elif difficulty_level == 'M':
             difficulty = True
             lives = 8
-            return lives
         elif difficulty_level == 'H':
             difficulty = True
             lives = 6
-            return lives
         else:
             print('Select E, M or H'.center(80))
+    return lives
 
 
 def random_word(lives):
@@ -117,13 +115,13 @@ def random_word(lives):
     """
 
     if lives == 10:
-        get_words = random.choice(easy_level).upper()
+        get_words = random.choice(EASY_LEVEL).upper()
         return get_words
     elif lives == 8:
-        get_words = random.choice(medium_level).upper()
+        get_words = random.choice(MEDIUM_LEVEL).upper()
         return get_words
     elif lives == 6:
-        get_words = random.choice(hard_level).upper()
+        get_words = random.choice(HARD_LEVEL).upper()
         return get_words
 
 
@@ -201,34 +199,32 @@ def game(word, lives_num):
         title()
         print('Congratulations you guessed the word'.center(80))
         print("\n")
-        while True:
-            player_wins = input(' ' * 23 +
-                                'Would you like to play again? Y/N '
-                                ).upper()
-            print('\n')
-            if player_wins == 'Y':
-                start_game()
-            elif player_wins == 'N':
-                welcome()
-            else:
-                print('You must press Y or N'.center(80))
+        play_again()
     else:
         clear_terminal()
         title()
         print(' ' * 20 + 'Sorry, you run out of lives. The word was: ' +
               word)
         print("\n")
-        while True:
-            player_lost = input(' ' * 25 +
-                                'Would you like to play again? Y/N '
-                                ).upper()
-            print('\n')
-            if player_lost == 'Y':
-                start_game()
-            elif player_lost == 'N':
-                welcome()
-            else:
-                print('You must press Y or N'.center(80))
+        play_again()
+
+
+def play_again():
+    """
+    This function will start the game again or return
+    to the main menu
+    """
+    while True:
+        player_input = input(' ' * 23 +
+                             'Would you like to play again? Y/N '
+                             ).upper()
+        print('\n')
+        if player_input == 'Y':
+            start_game()
+        elif player_input == 'N':
+            welcome()
+        else:
+            print('You must press Y or N'.center(80))
 
 
 def display_hangman(lives):
