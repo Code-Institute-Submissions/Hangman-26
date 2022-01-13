@@ -139,7 +139,7 @@ def game(word, lives_num):
         if len(player_guess) == 1 and player_guess.isalpha():
             if player_guess in guessed_letters:
                 clear_terminal()
-                print(' ' * 25 + 'You already guess the letter ' +
+                print(' ' * 25 + 'You already guessed the letter ' +
                       player_guess)
             elif player_guess not in word:
                 clear_terminal()
