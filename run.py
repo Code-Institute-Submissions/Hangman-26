@@ -112,13 +112,11 @@ def random_word(lives):
 
     if lives == 10:
         get_words = random.choice(EASY_LEVEL).upper()
-        return get_words
     elif lives == 8:
         get_words = random.choice(MEDIUM_LEVEL).upper()
-        return get_words
     elif lives == 6:
         get_words = random.choice(HARD_LEVEL).upper()
-        return get_words
+    return get_words
 
 
 def game(word, lives_num):
