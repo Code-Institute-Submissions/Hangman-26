@@ -14,6 +14,8 @@ You can view the live site [here](https://hangman-fun-game.herokuapp.com/)
 
 It's a popular word guessing game where the player attempts to build a missing word by guessing one letter at a time. 
 
+The player can choose the difficulty level. Easy (10 lives), medium (8 lives) and hard (6 lives). Each level increases the number of letters a player must guess
+
 The player must guess the letters of the hidden word, if the guess is correct, the letter missing in the word is replaced by the correct letter.
 
 If the player puts an incorrect letter, the error message is displayes and the player is asked to resubmit their choce. Each wrong guess takes 1 life. 
@@ -72,7 +74,8 @@ Game ends if the player correctly guesses all the letters of the missing word or
 <img src="readme-assets/images/final-rules.png" width="600px" height="400">
 </p>
 
-- Difficulty Level - by selecting number one from the main menu user can also select the difficulty level and start the game 
+- Difficulty Level - by selecting number one from the main menu user can also select the difficulty level and start the game. Each level increases the number of letters a player must guess
+
 <p align="center">
 <img src="readme-assets/images/final-difficulty-level.png" width="600px" height="400">
 </p>
