@@ -93,7 +93,7 @@ Game ends if the player correctly guesses all the letters of the missing word or
 <img src="readme-assets/images/final-letter-not-in.png" width="400px" height="100">
 </p>
 <p align="center">
-<img src="readme-assets/images/letter-already-guessed.png" width="400px" height="100">
+<img src="readme-assets/images/letter_already_guessed.png" width="400px" height="100">
 </p>
 
 - Invalid inputs - to be sure that the user provided  the correct input. For any invalid input, the error message  will appear. 
