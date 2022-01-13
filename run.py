@@ -183,6 +183,14 @@ def game(word, lives_num):
         print(" ".join(blanks).center(76))
         print('\n')
 
+    restart_game(guessed, word)
+
+
+def restart_game(guessed, word):
+    """
+    This function will triger when user lost all his lives 
+    or guess a word
+    """
     if guessed:
         clear_terminal()
         print('Congratulations you guessed the word'.center(80))
