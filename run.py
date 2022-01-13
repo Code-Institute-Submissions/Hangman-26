@@ -124,7 +124,6 @@ def game(word, lives_num):
     This fucntion will set the difficulty level
     and start the game
     """
-
     clear_terminal()
     blanks = '_' * len(word)
     guessed = False
