@@ -8,7 +8,7 @@ Users can try to beat the computer by guessing the letters of the missing word. 
 <img src="readme-assets/images/responsive-hangman.png" width="800" height="100%">
 </p>
 
-You can view the deployed website [here](https://hangman-fun-game.herokuapp.com/)
+You can view the live site [here](https://hangman-fun-game.herokuapp.com/)
 
 # How to play
 
