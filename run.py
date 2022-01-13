@@ -50,7 +50,7 @@ def welcome():
         elif player_choice == '2':
             rules()
         else:
-            print('You must chose 1 or 2'.center(74))
+            print('You must choose 1 or 2'.center(74))
             print('\n')
 
 
