@@ -188,7 +188,7 @@ def game(word, lives_num):
 
 def restart_game(guessed, word):
     """
-    This function will triger when user lost all his lives 
+    This function will triger when user lost all his lives
     or guess a word
     """
     if guessed:
